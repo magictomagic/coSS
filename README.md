@@ -13,4 +13,9 @@
 > send hotkey to system to get text from the global-field
 > use busy waiting until release the key to prevent long time pressed 
 
-* 
+
+## 最后搞
+用类似有道取词的方法，C++调用windows方法hook，编译成dll，python调用，写成第三方库。
+
+## 放弃
+ * if os does not has clipboard list, save clipboard before copy 

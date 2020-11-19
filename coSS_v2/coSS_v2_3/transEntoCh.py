@@ -2,7 +2,7 @@
 Author: magictomagic
 Date: 2020-11-13 15:42:49
 LastEditors: magictomagic
-LastEditTime: 2020-11-19 19:12:21
+LastEditTime: 2020-11-19 21:55:23
 Description: file content
 '''
 import requests
@@ -13,7 +13,7 @@ import ydCookie
 from random import randrange
 
 TIMES = 1 # set TIMES = 0 to creat/update cookie / first launch
-distinctCookieFile = "save1.txt"
+distinctCookieFile = "save.txt"
 
 
 def genearteMD5(str):

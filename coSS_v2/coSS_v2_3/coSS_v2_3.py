@@ -1,8 +1,8 @@
 '''
 Author: magictomagic
-Date: 2020-11-18 12:48:50
+Date: 2020-11-19 21:34:32
 LastEditors: magictomagic
-LastEditTime: 2020-11-19 21:28:34
+LastEditTime: 2020-11-19 21:48:49
 Description: file content
 '''
 import win32clipboard as w
@@ -11,7 +11,7 @@ import transEntoCh
 import time
 import win32api
 import win32con
-import c3
+import readFromJson
 
 
 def getText():
@@ -27,13 +27,8 @@ def setText(aString):
     w.SetClipboardData(win32con.CF_TEXT, aString)
     w.CloseClipboard()
 
-def superAddtion(en, ch, outputFile):
-    with open(outputFile, 'a+') as f:
-        f.write('| ' + en + ' | ' + ch + ' |\n')
-    # TODO: judge if have written and display result
 
-
-def copyGfCSA(outputFile):
+def copyGfCSA():
     # TODO: save clipboard content first
     while keyboard.is_pressed("alt") or keyboard.is_pressed("l"):
         time.sleep(0.1)
@@ -43,14 +38,10 @@ def copyGfCSA(outputFile):
     win32api.keybd_event(17,0,win32con.KEYEVENTF_KEYUP,0)
     time.sleep(0.1)
     processedText = getText().strip()
-    superAddtion(processedText, transEntoCh.translate(processedText), outputFile)
-    # print(getText())
+    readFromJson.saveSentence(processedText, transEntoCh.translate(processedText))
+    # TODO: judge if have written and display result
 
 
-
-# TODO:
-# if os does not has clipboard list, save clipboard before copy 
 if __name__=="__main__":
-    outputFile = 'add_to.md'
-    keyboard.add_hotkey('ctrl+alt+l', copyGfCSA, ['add_to.md'], False)
+    keyboard.add_hotkey('ctrl+alt+l', copyGfCSA, [], False)
     keyboard.wait('esc')
