@@ -2,7 +2,7 @@
 Author: magictomagic
 Date: 2020-11-19 19:13:50
 LastEditors: magictomagic
-LastEditTime: 2020-11-19 21:37:51
+LastEditTime: 2020-11-19 22:26:12
 Description: file content
 '''
 import os
@@ -12,13 +12,7 @@ defaultConfig = {
     "location" : ""
 }
 
-def superAddtion(en, ch, outputFile):
-    with open(outputFile, 'a+') as f:
-        f.write('| ' + en + ' | ' + ch + ' |\n')
-    # TODO: judge if have written and display result
-
-
-def saveSentence(en, ch):
+def accessFile():
     with open("custom.json") as f:
         customInf = json.load(f)
     if "custom" in customInf:
@@ -29,6 +23,12 @@ def saveSentence(en, ch):
             filePath = defaultConfig["location"]
     else:
         filePath = defaultConfig["location"]
+
+    return filePath
+
+
+def saveSentence(en, ch):
+    filePath = accessFile()
     if os.path.exists(filePath):
         with open(filePath, 'a+') as f:
             f.write('| ' + en + ' | ' + ch + ' |\n')
@@ -41,4 +41,6 @@ def saveSentence(en, ch):
 # TODO:
 # if os does not has clipboard list, save clipboard before copy 
 if __name__=="__main__":
+    # print(filePath)
+    # saveSentence("adas","1312")
     pass

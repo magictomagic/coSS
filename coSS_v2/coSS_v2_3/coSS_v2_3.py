@@ -2,7 +2,7 @@
 Author: magictomagic
 Date: 2020-11-19 21:34:32
 LastEditors: magictomagic
-LastEditTime: 2020-11-19 21:48:49
+LastEditTime: 2020-11-19 22:11:37
 Description: file content
 '''
 import win32clipboard as w
@@ -17,19 +17,12 @@ import readFromJson
 def getText():
     w.OpenClipboard()
     d = w.GetClipboardData(win32con.CF_TEXT)
-    # TODO: judge if not text
+    
     w.CloseClipboard()
     return(d).decode('GBK')
 
-def setText(aString):
-    w.OpenClipboard()
-    w.EmptyClipboard()
-    w.SetClipboardData(win32con.CF_TEXT, aString)
-    w.CloseClipboard()
-
 
 def copyGfCSA():
-    # TODO: save clipboard content first
     while keyboard.is_pressed("alt") or keyboard.is_pressed("l"):
         time.sleep(0.1)
     win32api.keybd_event(17,0,0,0)  #ctrl
@@ -45,3 +38,5 @@ def copyGfCSA():
 if __name__=="__main__":
     keyboard.add_hotkey('ctrl+alt+l', copyGfCSA, [], False)
     keyboard.wait('esc')
+    # with open(r"D:\mtm-github\asdf.md", "a+") as f:
+    #     f.write("Adasd\n")
