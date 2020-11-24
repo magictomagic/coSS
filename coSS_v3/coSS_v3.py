@@ -2,7 +2,7 @@
 Author: magictomagic
 Date: 2020-11-19 21:34:32
 LastEditors: magictomagic
-LastEditTime: 2020-11-19 22:11:37
+LastEditTime: 2020-11-24 16:09:16
 Description: file content
 '''
 import win32clipboard as w
@@ -12,12 +12,11 @@ import time
 import win32api
 import win32con
 import readFromJson
-
+import feedback
 
 def getText():
     w.OpenClipboard()
     d = w.GetClipboardData(win32con.CF_TEXT)
-    
     w.CloseClipboard()
     return(d).decode('GBK')
 
@@ -32,11 +31,9 @@ def copyGfCSA():
     time.sleep(0.1)
     processedText = getText().strip()
     readFromJson.saveSentence(processedText, transEntoCh.translate(processedText))
-    # TODO: judge if have written and display result
+    feedback.toastWinInfo("asd.ico", 10, True)  # TODO: custom your feedback here
 
 
 if __name__=="__main__":
     keyboard.add_hotkey('ctrl+alt+l', copyGfCSA, [], False)
     keyboard.wait('esc')
-    # with open(r"D:\mtm-github\asdf.md", "a+") as f:
-    #     f.write("Adasd\n")
