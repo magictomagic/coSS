@@ -2,9 +2,12 @@
 Author: magictomagic
 Date: 2020-11-19 21:34:32
 LastEditors: magictomagic
-LastEditTime: 2020-11-24 16:09:16
+LastEditTime: 2020-11-24 17:17:45
 Description: file content
 '''
+
+# pyinstaller -F .\coSS_v3.py --noconsole
+
 import win32clipboard as w
 import keyboard
 import transEntoCh

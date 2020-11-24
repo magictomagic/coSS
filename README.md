@@ -20,6 +20,9 @@
 * 添加成功的反馈（success + 译文 + 悬浮 2 秒）
 
 ### coSS_v3 ###
+**TODO:**
+* use database indexing by time and alphabetical
+
 
 
 ## 最后搞 ##
@@ -28,3 +31,4 @@
 ## 放弃 ##
  * if os does not has clipboard list, save clipboard before copy 
  * judge if translation content is not text
+
