@@ -23,6 +23,7 @@
 **TODO:**
 * use database indexing by time and alphabetical
 
+* 支持“删除”操作
 
 
 ## 最后搞 ##
