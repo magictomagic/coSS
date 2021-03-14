@@ -23,6 +23,8 @@
 **TODO:**
 * use database indexing by time and alphabetical
 * 支持“删除”操作
+* 规整化，去重
+* 异步（目前会冲突）
 * 检测输出文件的路径是否存在
 * 快捷键预览文件(发送 空格，打开文件(编辑模式)
 * 右下角小图标显示运行
