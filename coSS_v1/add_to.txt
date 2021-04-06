@@ -1,4 +1,0 @@
-adasda				草泥马
-adasda				草泥马
- Exactly like tobias_k mentions in his comment				就像tobias_k在评论中提到的那样
-Python - Tkinter Text - Text widgets provide advanced capabilities that allow you to ... Normally, text selected within a text widget is exported to be the selection in the ... The color of the focus highlight when the text widget does not have focus. 9.				Python - Tkinter Text - Text widgets提供高级功能，允许你…

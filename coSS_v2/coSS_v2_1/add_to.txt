@@ -1,2 +1,0 @@
-An application typically registers at least one new window class------应用程序通常至少注册一个新的窗口类
-| C multi-line macro: do/while(0) vs scope block [duplicate] | C多行宏:do/while(0) vs范围块[duplicate] |
